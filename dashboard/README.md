@@ -3,7 +3,7 @@
 Interfaz analítica sobre los datos limpios de la Fase I (productividad en
 equipos de confección, UCI, 1,197 registros). Modalidad A: mismo dataset.
 
-**Enlace público:** _(pegar aquí la URL de Streamlit Community Cloud)_
+**Enlace público:** https://confeccion-dashboard.streamlit.app/
 
 ## Estructura
 
@@ -51,13 +51,9 @@ limpio publicado. Para regenerarlo (requiere scikit-learn):
 py dashboard/preparar_datos.py
 ```
 
-## Publicar en Streamlit Community Cloud
+## Publicación
 
-1. Entrar a https://share.streamlit.io con la cuenta de GitHub `feeerr04`.
-2. **Create app** → *Deploy a public app from GitHub*.
-3. Repository: `feeerr04/proyecto-da` · Branch: `main` ·
-   Main file path: `dashboard/app.py`.
-4. **Deploy**. Cada push a `main` actualiza la app automáticamente.
+La app ya está publicada en Streamlit Community Cloud y se actualiza sola cada vez que alguien sube cambios a `main` (tarda uno o dos minutos).
 
 ## Reparto del trabajo
 
