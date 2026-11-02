@@ -63,7 +63,31 @@ La app ya está publicada en Streamlit Community Cloud y se actualiza sola cada 
 | 2 | _(compañero 2)_ | `vistas/patrones.py`, `vistas/causa_raiz.py` | Patrones, anomalías y causa raíz |
 | 3 | _(compañero 3)_ | `vistas/recomendacion.py`, adenda IEEE | Recomendación, pulido final, capturas anotadas, Sección V-B |
 
-Cada vista pendiente trae en su encabezado qué gráficos construir.
+Las páginas de la Parte 2 están implementadas. Recomendación conserva su
+plantilla para la Parte 3.
+
+## Parte 2: patrones y condiciones asociadas
+
+- **Patrones:** brecha semanal por departamento, ranking por departamento y
+  equipo, evolución real/meta en paneles desplegables, anomalías por fecha y
+  tabla de inspección. Las semanas van de lunes a domingo y pueden quedar
+  parciales al filtrar. Los promedios dan el mismo peso a cada registro.
+- **Causa raíz:** condiciones operativas por cumplimiento y departamento,
+  porcentajes con/sin cambios de estilo o inactividad, dispersión frente a
+  incentivo y tiempo extra, diferencias descriptivas y detalle por registro.
+  Solo se comparan grupos presentes dentro del mismo departamento; no se
+  presentan asociaciones como efectos causales.
+- Ambas vistas usan exclusivamente los filtros globales, conservan las marcas
+  de atípicos del conjunto completo y muestran tamaños de muestra. WIP ausente
+  no se trata como cero. El umbral de 30 registros es una advertencia de
+  lectura, no una garantía de representatividad o significancia.
+
+Para comprobar cálculos, gráficos y navegación con las dependencias del
+dashboard instaladas, desde la raíz:
+
+```
+python -m unittest discover -s dashboard/tests -v
+```
 
 ## Reglas para que el dashboard se vea como un solo sistema
 
